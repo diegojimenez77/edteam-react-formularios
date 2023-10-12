@@ -2,6 +2,7 @@ import "./App.scss";
 import { useRef } from 'react';
 import Field from "./components/Field";
 import Submit from "./components/Submit";
+import Form from "./components/Form";
 
 const App = () => {
 
@@ -15,11 +16,11 @@ const App = () => {
   }
   return(
     <div className="ed-grid">
-      <form className="ed-container l-30" onSubmit={submit} ref={loginForm}>
+      <Form submit={submit} formRef={loginForm}>
           <Field type="email" value={data.email} label="Correo electronico"/>
           <Field type="password" value={data.password} label="password"/> 
           <Submit value="Login" />
-      </form>
+      </Form>
     </div>
   )
 }
